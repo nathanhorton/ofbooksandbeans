@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
-a, a:active, a:hover, a:focus {
-    color: inherit;
+a:hover, a:active, a:focus, a {
     text-decoration: none;
+    color: inherit;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: Calc(100% - 8em);
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -28,6 +38,7 @@ header hgroup h1 {
     line-height: 1em;
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
+    /*text-shadow: 0.2em 0.1em #ff0000, 0.1em 0.2em #0000ff;*/
 }
 
 header hgroup h2 {
@@ -35,7 +46,17 @@ header hgroup h2 {
     line-height: 1rem;
     font-family: 'Roboto Mono', monospace;
     padding-top: 1em;
+    padding-right: 3rem;
     margin: 0;
+}
+
+header nav {
+    margin-left: auto;
+    font-weight: 200;
+}
+
+.currentView {
+    font-weight: 900;
 }
 
 header ul {
@@ -49,11 +70,53 @@ header ul {
 header ul li {
     display: inline-block;
     font-family: 'Roboto Mono', monospace;
-    border-right: white 0.1em solid;
     padding: 0 1em 0 1em;
-    text-align: center;
+    text-align: right;
 }
 
 header ul li:last-child {
     border-right: none;
+}
+
+@media (max-width: 30em){
+    header ul {
+        display: inline-block;
+        align-items: end;
+        text-align: right;
+    }
+    header ul li {
+        display: inline-block;
+        width: 100%;
+        border: none;
+        text-align: right;
+    }
+}
+@media (min-width: 30em) and (max-width: 50em) {
+    header ul li {
+        display: inline-block;
+        width: 40%;
+        padding-right: 0;
+        text-align: center;
+    }
+    header ul li:nth-child(-n+2) {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (min-width: 50em) {
+    header ul li {
+        border-right: white 0.1em solid;
+    }
+}
+
+main {
+    margin-top: 8em;
+    width: 100%;
+    min-height: Calc( 100% - 16em);
+}
+
+footer {
+    width: 100%;
+    min-height: 16rem;
+    background-color: #e3e3e3;
 }
