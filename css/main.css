@@ -30,24 +30,32 @@ header {
 header hgroup {
     float: left;
     padding-left: 1rem;
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0 2rem 0;
 }
 
 header hgroup h1 {
+    margin: 0;
+    font-size: 0;
+    padding-bottom: 1rem;
+}
+
+header hgroup h1 span {
+    display: inline-flex;
+    width: 100%;
+    font-weight: 700;
     font-size: 1.75rem;
     line-height: 1em;
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
-    /*text-shadow: 0.2em 0.1em #ff0000, 0.1em 0.2em #0000ff;*/
+    padding: 0;
 }
 
-header hgroup h2 {
+header hgroup span {
     font-size: 1rem;
+    font-weight: 500;
     line-height: 1rem;
     font-family: 'Roboto Mono', monospace;
-    padding-top: 1em;
     padding-right: 3rem;
-    margin: 0;
 }
 
 header nav {
@@ -116,7 +124,46 @@ main {
 }
 
 footer {
-    width: 100%;
-    min-height: 16rem;
+    display: inline-block;
+    width: Calc(100% - 2rem);
+    min-height: 14rem;
     background-color: #e3e3e3;
+    padding: 1rem;
+}
+
+footer section {
+    text-align: center;
+}
+
+/* Responsive changes for mobile view */
+@media (max-width: 30em){
+    footer section {
+        width: 100%;
+    }
+}
+
+/* Responsive changes for tablet view */
+@media (min-width: 30em) and (max-width: 50em) {
+    footer section {
+        width: 50%;
+    }
+}
+
+/* Responsive changes for web view */
+@media (min-width: 50em) {
+    footer section {
+        width: 50%;
+    }
+}
+
+footer section a div {
+    color: #848484;
+    float: left;
+    font-size: 1.75rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    line-height: 1em;
+}
+footer section a div span {
+    display: flex;
 }
