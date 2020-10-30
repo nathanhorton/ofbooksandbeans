@@ -16,9 +16,6 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: black;
     color: white;
@@ -118,47 +115,72 @@ header ul li:last-child {
 }
 
 main {
-    margin-top: 8em;
     width: 100%;
-    min-height: Calc( 100% - 16em);
+    min-height: Calc( 100% - 13em);
+}
+
+main section {
+    max-width: Calc(100% - 25%);
 }
 
 footer {
-    display: inline-block;
+    justify-content: space-between;
     width: Calc(100% - 2rem);
-    min-height: 14rem;
+    min-height: 4rem;
     background-color: #e3e3e3;
     padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 footer section {
-    text-align: center;
+    text-align: left;
+    flex: 1;
+    width: 100%;
 }
 
-/* Responsive changes for mobile view */
 @media (max-width: 30em){
-    footer section {
-        width: 100%;
+    footer {
+        display: block;
     }
 }
 
-/* Responsive changes for tablet view */
 @media (min-width: 30em) and (max-width: 50em) {
+    footer section:first-child, footer section:last-child {
+        flex-basis: 100%;
+        text-align: center;
+    }
     footer section {
-        width: 50%;
+        text-align: center;
     }
 }
 
-/* Responsive changes for web view */
 @media (min-width: 50em) {
-    footer section {
-        width: 50%;
+
+    footer section:last-child {
+        flex-basis: 100%;
+        text-align: center;
     }
+
+    footer section:last-child p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+footer section:last-child {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+}
+
+footer section:first-child {
+    min-height: 5rem;
 }
 
 footer section a div {
     color: #848484;
-    float: left;
     font-size: 1.75rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
@@ -167,3 +189,19 @@ footer section a div {
 footer section a div span {
     display: flex;
 }
+
+footer section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+footer section li {
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer section h3 {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
