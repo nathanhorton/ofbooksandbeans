@@ -142,11 +142,14 @@ main section li {
 
 main section article {
     display: flex;
-    box-shadow: 0 0.3em 0.5em 0.05em rgba(0,0,0,0.3);
+    flex-wrap: wrap;
+    box-shadow: 0 0.3em 0.8em 0.1em rgba(0,0,0,0.35);
     border-radius: 2rem;
 }
 
 main section article aside {
+    display: flex;
+    align-items: center;
     flex: 1;
     margin: 1rem;
     max-width: 6rem;
@@ -158,10 +161,81 @@ main section article aside img {
     border-radius: 1rem;
 }
 
-main section article h3 {
+main section article aside a {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #1898ff;
+    font-weight: 700;
+}
+
+main section article aside a:hover {
+    font-weight: 900;
+    color: #1898ff;
+}
+
+@media (max-width: 30em){
+    main section article aside:last-child {
+        flex-basis: 100%;
+        max-width: none;
+        margin: 0 1rem 1rem 1rem;
+    }
+    main section article aside:last-child a {
+        width: 100%;
+        text-align: right;
+    }
+    main section article div:last-of-type {
+        display: none;
+    }
+}
+
+@media (min-width: 30em) and (max-width: 40em) {
+    main section article aside:last-child {
+        flex-basis: 100%;
+        max-width: none;
+        margin: 0 1rem 1rem 1rem;
+    }
+    main section article aside:last-child a {
+        width: 100%;
+        text-align: right;
+    }
+}
+
+main section article div {
+    margin: 1rem 1rem 1rem 0;
+}
+
+main section article div:first-of-type {
     flex: 2;
+}
+
+main section article div:first-of-type h3 {
     font-weight: 600;
     font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+main section article div:first-of-type p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+}
+
+main section article div:last-of-type {
+    max-width: 6rem;
+    flex: 3;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+}
+
+main section article div:last-of-type p {
+    margin: 0;
+}
+
+main section article div:last-of-type p:nth-of-type(2) {
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 
