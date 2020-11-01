@@ -57,12 +57,19 @@ header hgroup h1 span {
     padding: 0;
 }
 
-header hgroup span {
+header hgroup h2 {
+    margin: 0;
+    padding: 0;
+    line-height: 0.5rem;
+}
+
+header hgroup h2 span {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1rem;
     font-family: 'Roboto Mono', monospace;
     padding-right: 3rem;
+    margin: 0;
 }
 
 header nav {
