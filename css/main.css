@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 a:hover, a:active, a:focus, a {
     text-decoration: none;
@@ -115,7 +116,7 @@ header ul li:last-child {
     }
 }
 
-main {
+body main {
     width: 100%;
     min-height: Calc( 100% - 13em);
 }
@@ -145,6 +146,7 @@ main section h3 {
     flex: 1;
     font-weight: 700;
     font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 0.5rem;
 }
 
 
@@ -165,10 +167,11 @@ main section div a:hover {
 main section ul {
     list-style: none;
     padding: 0;
+    margin-top: 0;
 }
 
 main section li {
-    padding-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
 }
 
 main section article {
@@ -176,6 +179,7 @@ main section article {
     flex-wrap: wrap;
     box-shadow: 0 0.3em 0.8em 0.1em rgba(0,0,0,0.35);
     border-radius: 2rem;
+    margin-bottom: 1rem;
 }
 
 main section article aside {
@@ -281,6 +285,8 @@ main section article div:last-of-type p:last-of-type {
 
 main section article figure {
     margin: 1rem;
+    text-align: center;
+    width: 100%;
 }
 
 main section article figure img {
@@ -289,6 +295,15 @@ main section article figure img {
     max-height: 25rem;
     width: 100%;
     border-radius: 1.5rem;
+}
+
+main section article figure q {
+    display: inline-block;
+    font-size: 1.8rem;
+    text-justify: newspaper;
+    padding: 0 1rem;
+    font-weight: 700;
+    font-family: 'Libre Baskerville', serif;
 }
 
 main section article figure figcaption {
@@ -307,6 +322,14 @@ figcaption span:first-of-type {
 
 figcaption span:last-of-type {
     color: #848484;
+}
+
+article main {
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
 }
 
 footer {
