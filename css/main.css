@@ -7,6 +7,14 @@ a:hover, a:active, a:focus, a {
     color: inherit;
 }
 
+.headline {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.subline {
+    margin-top: 0;
+}
+
 html {
     height: 100%;
 }
