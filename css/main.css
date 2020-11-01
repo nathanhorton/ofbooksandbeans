@@ -257,27 +257,27 @@ main section article div:last-of-type p:last-of-type {
 }
 
 @media (max-width: 30em){
-    main section article aside:last-child {
+    main section li article aside:last-child {
         flex-basis: 100%;
         max-width: none;
         margin: 0 1rem 1rem 1rem;
     }
-    main section article aside:last-child a {
+    main section li article aside:last-child a {
         width: 100%;
         text-align: right;
     }
-    main section article div:last-of-type {
+    main section li article div:last-of-type {
         display: none;
     }
 }
 
 @media (min-width: 30em) and (max-width: 40em) {
-    main section article aside:last-child {
+    main section li article aside:last-child {
         flex-basis: 100%;
         max-width: none;
         margin: 0 1rem 1rem 1rem;
     }
-    main section article aside:last-child a {
+    main section li article aside:last-child a {
         width: 100%;
         text-align: right;
     }
@@ -290,11 +290,10 @@ main section article figure {
 }
 
 main section article figure img {
-    object-fit: cover;
+    object-fit: contain;
     object-position: 50% 80%;
-    max-height: 25rem;
+    max-height: 35rem;
     width: 100%;
-    border-radius: 1.5rem;
 }
 
 main section article figure q {
@@ -330,6 +329,42 @@ article main {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     word-wrap: break-word;
+}
+
+article ul {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+article ul li {
+    width: 25%;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+article ul li p {
+    padding: 0.5rem 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+}
+
+@media (max-width: 35em){
+    article ul li p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 35em) {
+    article ul li p {
+        font-size: 1rem;
+    }
+}
+
+article ul li p i {
+    font-size: 2rem;
 }
 
 footer {
@@ -413,4 +448,3 @@ footer section h3 {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
